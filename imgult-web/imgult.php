@@ -43,6 +43,21 @@ div.top-banner {
   text-align: center;
   margin: 0 auto;
 }
+h1.error404:hover {
+  text-shadow: 3px 3px 3px #77219A, 7px 10px 7px #05E139;
+  color: rgba(1, 1, 1, 0.8);
+  transition: all 0.3s ease 0s;
+}
+h1.error404 {
+  font-size: 3em;
+  font-family: georgia;
+  text-shadow: 10px 10px 5px #F50F50, 3px 3px 3px #7AC9ED;
+  color: rgba(100, 100, 100, 0.8);
+  border-radius: 4em;
+  text-align: center;
+  margin-bottom: 0.75em;
+  transition: all 0.5s ease 0s;
+}
 </style>
 <script>
 function clearForm() {
@@ -51,7 +66,7 @@ function clearForm() {
 </script>
 </head>
 <body>
-<h1>imgult for web</h1>
+<h1 class="error404">imgult for web</h1>
 <div class="top-banner">
   <img src="https://raw.githubusercontent.com/ryanpcmcquen/slackLogos/090ff5191b9f288d4fe25ef90d8a34d3ea59af75/poweredbyslack-imgulted.gif">
 </div>
