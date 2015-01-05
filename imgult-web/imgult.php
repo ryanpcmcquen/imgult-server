@@ -53,7 +53,7 @@ function clearForm() {
 <body>
 <h1>imgult for web</h1>
 <div class="top-banner">
-  <img src="http://www.slackware.com/~msimons/slackware/grfx/shared/poweredbyslack.gif">
+  <img src="https://raw.githubusercontent.com/ryanpcmcquen/slackLogos/090ff5191b9f288d4fe25ef90d8a34d3ea59af75/poweredbyslack-imgulted.gif">
 </div>
 <form method='POST' enctype='multipart/form-data' name='frmmain' action='imgult.php'>
 <input type="file" id="image_dump" name="image_files" multiple="true">
