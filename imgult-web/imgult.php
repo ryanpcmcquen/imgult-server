@@ -78,7 +78,7 @@ function clearForm() {
 </form>
 <br>
 <?php
-if ($result==1) echo shell_exec("./imgult 2>&1");
+if ($result==1) echo shell_exec("imgult 2>&1");
 if ($result==1) echo("<img src='".$imagename."'>");
 ?>
 </body>
