@@ -46,7 +46,7 @@ div.top-banner {
 h1.error404:hover {
   text-shadow: 3px 3px 3px #77219A, 7px 10px 7px #05E139;
   color: rgba(1, 1, 1, 0.8);
-  transition: all 0.3s linear 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 h1.error404 {
   font-size: 3em;
@@ -56,7 +56,7 @@ h1.error404 {
   border-radius: 4em;
   text-align: center;
   margin-bottom: 0.75em;
-  transition: all 0.5s linear 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 </style>
 <script>
