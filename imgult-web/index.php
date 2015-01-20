@@ -79,7 +79,7 @@ if (trim($_POST["action"]) == "IMGULT!") {
  <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post">
  <input type="file" name="userfile[]" multiple="true">
 
- <input type="submit" value="IMGULT!">
+ <input type="submit" value="IMGULT!" name="action">
 <?php
 if ($result == 1) echo shell_exec("./imgult 2>&1; zip ./uploads/");
 if ($result == 1) echo "./uploads.zip");
