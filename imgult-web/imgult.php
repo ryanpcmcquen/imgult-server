@@ -1,12 +1,12 @@
 <?php
 $result=0;
-if ($result==0) echo shell_exec("rm -rf uploads/ 2>&1 && mkdir uploads/ 2>&1");
+if ($result == 0) echo shell_exec("rm -rf uploads/ 2>&1 && mkdir uploads/ 2>&1");
 if (trim($_POST["action"]) == "IMGULT!") {
-  for ($i=0; $i < count($_FILES['image_files']['name']); $i++) {
+  for ($i = 0; $i < count($_FILES['image_files']['name']); $i++) {
     $target_dir = "uploads/";
     $imagename = $target_dir . basename($_FILES['image_files']['name']);
     $result = @move_uploaded_file($_FILES['image_files']['tmp_name'], $imagename);
-    if ($result==1) echo "Successfully uploaded: <b>'$imagename'</b>";
+    if ($result == 1) echo "Successfully uploaded: <b>'$imagename'</b>";
   }
 }
 ?>
