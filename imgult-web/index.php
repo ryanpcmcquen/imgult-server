@@ -17,16 +17,6 @@
     /*** the upload directory ***/
     $upload_dir= './uploads';
 
-    /*** numver of files to upload ***/
-    $num_uploads = 5;
-
-    /*** maximum filesize allowed in bytes ***/
-    $max_file_size  = 51200;
- 
-    /*** the maximum filesize from php.ini ***/
-    $ini_max = str_replace('M', '', ini_get('upload_max_filesize'));
-    $upload_max = $ini_max * 1024;
-
     /*** a message for users ***/
     $msg = 'Please select files for uploading';
 
@@ -37,22 +27,12 @@
     if(isset($_FILES['userfile']['tmp_name']))
     {
         /** loop through the array of files ***/
-        for($i=0; $i < count($_FILES['userfile']['tmp_name']);$i++)
+        for($i = 0; $i < count($_FILES['userfile']['tmp_name']); $i++)
         {
             // check if there is a file in the array
             if(!is_uploaded_file($_FILES['userfile']['tmp_name'][$i]))
             {
                 $messages[] = 'No file uploaded';
-            }
-            /*** check if the file is less then the max php.ini size ***/
-            elseif($_FILES['userfile']['size'][$i] > $upload_max)
-            {
-                $messages[] = "File size exceeds $upload_max php.ini limit";
-            }
-            // check the file is less than the maximum file size
-            elseif($_FILES['userfile']['size'][$i] > $max_file_size)
-            {
-                $messages[] = "File size exceeds $max_file_size limit";
             }
             else
             {
@@ -92,15 +72,7 @@
  ?>
  </p>
  <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post">
- <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size; ?>" />
- <?php
-    $num = 0;
-    while($num < $num_uploads)
-    {
-        echo '<div><input name="userfile[]" type="file" /></div>';
-        $num++;
-    }
- ?>
+ <input type="file" name="userfile[]" multiple="true">
 
  <input type="submit" value="Upload" />
  </form>
