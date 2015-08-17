@@ -1,0 +1,26 @@
+{
+  "name": "imgult",
+  "version": "0.1.0",
+  "description": "Fast and simple image optimization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanpcmcquen/imgult-server.git"
+  },
+  "keywords": [
+    "image",
+    "optimization"
+  ],
+  "author": "Ryan P.C. McQuen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ryanpcmcquen/imgult-server/issues"
+  },
+  "homepage": "https://github.com/ryanpcmcquen/imgult-server#readme",
+  "devDependencies": {
+    "exec": "^0.2.1"
+  }
+}

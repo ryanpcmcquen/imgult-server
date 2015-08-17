@@ -1,0 +1,1 @@
+A simple web frontend to imgult.
